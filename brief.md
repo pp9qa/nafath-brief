@@ -43,4 +43,8 @@ Resource: Royal Decree 6/2022 Issuing the Personal Data Protection Law (Consolid
 
 ## Misconception in My Track
 
+A common misconception is that a successful accuracy test makes a suspicious-login model safe to deploy permanently. Section 5.3, Measure, of the NIST AI RMF Core calls for testing before deployment and during operation. Accuracy alone cannot establish whether errors unfairly affect some citizens or expose private information. For this service, I would assess these risks before launch, monitor performance afterwards, and keep human review available when automated flags are disputed.
+
 ## Open Question
+
+What false-alarm rate would be acceptable for this login service, and how should the authority route disputed AI flags to human review without delaying legitimate citizens unnecessarily?
