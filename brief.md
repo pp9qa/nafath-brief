@@ -3,7 +3,7 @@ Track: AI
 
 ## Overview
 
-A national single sign-on service connects identity, security and privacy across the website, mobile app and government services. Software must separate proof of a citizen's identity from permission to access an API. AI can flag unusual logins, but its mistakes need testing, monitoring and human review. Android permissions limit the mobile app's access to protected features and information. DNS over HTTPS protects DNS exchanges with the chosen resolver, while phishing-resistant authentication helps protect accounts from fake login pages. Data governance determines which legal duties apply and how personal information is handled. These decisions need joint review because a weakness in one area can affect the whole login journey. My main focus is managing the risks of AI-based suspicious-login detection using the NIST AI Risk Management Framework.
+The service should let citizens use one account to sign in to several government services from a phone or browser. Making that work safely involves all six fields. Software handles login and access to service APIs. AI can flag unusual activity, but the team needs to test its errors and decide when a person should review a flag. Android permissions control the app's access to protected data and features. DNS over HTTPS protects DNS messages on their way to the resolver. Phishing-resistant authentication protects against fake login pages, while data governance sets the rules for handling citizens' information. The teams need to review these choices together. My main focus is managing the risks of AI-based suspicious-login detection using the NIST AI Risk Management Framework.
 
 ## Software
 
@@ -13,7 +13,7 @@ Resource: OpenID Connect Core 1.0 incorporating errata set 2 - https://openid.ne
 
 ## AI
 
-Applying NIST's AI Risk Management Framework through Govern, Map, Measure and Manage, the authority should assign accountability, map potential harms and test the login detector before deployment. Risks include missed attacks, false alarms affecting legitimate citizens, biased results, privacy loss and attacks against the model. Tests should reflect real users and operating conditions. Document limitations, provide human review and appeals, and define incident responses. Monitoring must continue after launch because performance and risks can change.
+NIST's AI Risk Management Framework has four functions: Govern, Map, Measure and Manage. For this service, the team should check whether the model misses attacks, flags legitimate logins, treats some groups unfairly, exposes private data or can be manipulated. Before launch, it should test the model under realistic conditions, document its limits and assign responsibility for decisions. Citizens need a way to challenge incorrect flags. Human review, incident response and continued monitoring should be planned from the start.
 
 Resource: AI RMF Core - https://airc.nist.gov/airmf-resources/airmf/5-sec-core/
 
@@ -43,7 +43,7 @@ Resource: Royal Decree 6/2022 Issuing the Personal Data Protection Law (Consolid
 
 ## Misconception in My Track
 
-A common misconception is that a successful accuracy test makes a suspicious-login model safe to deploy permanently. Section 5.3, Measure, of the NIST AI RMF Core calls for testing before deployment and during operation. Accuracy alone cannot establish whether errors unfairly affect some citizens or expose private information. For this service, I would assess these risks before launch, monitor performance afterwards, and keep human review available when automated flags are disputed.
+A common mistake is to assume that a model is safe to keep using indefinitely once it passes an accuracy test. NIST's AI RMF Core, Section 5.3, Measure, calls for testing before deployment and regularly during operation. A good overall score does not show whether errors affect some groups more than others or whether personal data is protected. For this service, I would check those risks before launch and keep reviewing the model's results afterwards.
 
 ## Open Question
 
