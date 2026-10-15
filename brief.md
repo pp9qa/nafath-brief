@@ -25,9 +25,21 @@ Resource: Request runtime permissions - https://developer.android.com/training/p
 
 ## Networking
 
+DNS over HTTPS (DoH) sends DNS questions and answers through an encrypted HTTPS connection between a device and its chosen resolver. This protects those messages from eavesdropping and tampering along that connection. It does not make browsing anonymous: the resolver can still associate queries with the client's IP address, and traffic analysis remains possible. DoH also does not replace DNSSEC, which checks DNS data authenticity; a dishonest resolver can still return incorrect answers.
+
+Resource: RFC 8484 - DNS Queries over HTTPS (DoH) - https://www.rfc-editor.org/rfc/rfc8484.html
+
 ## Cybersecurity
 
+Phishing-resistant authentication binds cryptographic proof to the genuine service or secure channel, preventing fake sites from collecting usable login responses. FIDO2/WebAuthn credentials with PIN or biometric verification provide phishing-resistant MFA. PIV smart cards using client-authenticated TLS also qualify when a PIN provides a verified second factor. Passwords plus SMS codes, authenticator-app codes or ordinary approval prompts do not qualify. The login service should choose methods that resist phishing without relying on citizens spotting scams.
+
+Resource: NIST SP 800-63B-4 - Authentication and Authenticator Management - https://pages.nist.gov/800-63-4/sp800-63b.html
+
 ## Data
+
+Article 3(b) excludes state bodies' processing for legally prescribed functions. Where the law applies, obtain explicit consent unless an Article 10bis exception applies; explain processing purposes, protect confidentiality, assess risks, and appoint a data protection officer. Support rights to copies, correction and deletion under the prescribed rules. Notify the Ministry and affected people of qualifying breaches. Delete stored data immediately when its purpose ends, except where an existing dispute or legal obligation requires retention.
+
+Resource: Royal Decree 6/2022 Issuing the Personal Data Protection Law (Consolidated) - https://decree.om/2022/l20220006/
 
 ## Misconception in My Track
 
